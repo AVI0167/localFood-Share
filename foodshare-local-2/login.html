@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | FoodShare Local</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body class="login-page">
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="login-background">
+
+        <div class="gradient-orb orb-one"></div>
+
+        <div class="gradient-orb orb-two"></div>
+
+        <div class="gradient-orb orb-three"></div>
+
+        <div class="floating-shape shape-circle"></div>
+
+        <div class="floating-shape shape-square"></div>
+
+        <div class="floating-shape shape-triangle"></div>
+
+        <div class="background-grid"></div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <nav class="login-nav">
+
+        <a href="index.html" class="login-logo">
+
+            <span class="logo-mark">
+                FS
+            </span>
+
+            <span>
+                Food<span>Share</span>
+            </span>
+
+        </a>
+
+
+        <a href="register.html" class="nav-register">
+
+            Don't have an account?
+
+            <strong>
+                Sign up
+            </strong>
+
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="login-main">
+
+
+        <!-- =====================================
+             LEFT SHOWCASE
+        ====================================== -->
+
+        <section class="login-showcase">
+
+            <div class="showcase-content">
+
+
+                <div class="showcase-badge">
+
+                    <span class="badge-dot"></span>
+
+                    LOCAL COMMUNITY NETWORK
+
+                </div>
+
+
+
+                <h1>
+
+                    Good food
+
+                    <br>
+
+                    should never
+
+                    <br>
+
+                    <span>
+                        go to waste.
+                    </span>
+
+                </h1>
+
+
+
+                <p>
+
+                    FoodShare Local connects people
+                    with surplus food to nearby
+                    community members who need it.
+
+                </p>
+
+
+
+                <!-- FEATURE -->
+
+                <div class="showcase-feature">
+
+                    <div class="feature-icon">
+                        ♡
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Share locally
+                        </strong>
+
+                        <span>
+                            Make an impact in your community.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- STATS -->
+
+                <div class="showcase-stats">
+
+
+                    <div>
+
+                        <strong>
+                            01
+                        </strong>
+
+                        <span>
+                            Share
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-line"></div>
+
+
+                    <div>
+
+                        <strong>
+                            02
+                        </strong>
+
+                        <span>
+                            Connect
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-line"></div>
+
+
+                    <div>
+
+                        <strong>
+                            03
+                        </strong>
+
+                        <span>
+                            Reduce waste
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RIGHT LOGIN
+        ====================================== -->
+
+        <section class="login-section">
+
+
+            <div class="login-card">
+
+
+                <!-- MOBILE LOGO -->
+
+                <div class="mobile-login-logo">
+
+                    <span class="logo-mark">
+                        FS
+                    </span>
+
+                    <span>
+                        Food<span>Share</span>
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================
+                     HEADING
+                ================================== -->
+
+                <div class="login-heading">
+
+                    <span class="heading-eyebrow">
+                        WELCOME BACK
+                    </span>
+
+
+                    <h2>
+
+                        Sign in to
+                        <span>
+                            FoodShare.
+                        </span>
+
+                    </h2>
+
+
+                    <p>
+
+                        Continue your journey with
+                        your local community.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================
+                     LOGIN METHOD SWITCH
+                ================================== -->
+
+                <div class="auth-method-switch" role="tablist" aria-label="Login method">
+
+                    <button
+                        type="button"
+                        id="emailLoginTab"
+                        class="auth-method-tab active"
+                        role="tab"
+                        aria-selected="true">
+                        Email & Password
+                    </button>
+
+                    <button
+                        type="button"
+                        id="phoneLoginTab"
+                        class="auth-method-tab"
+                        role="tab"
+                        aria-selected="false">
+                        Mobile OTP
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     EMAIL LOGIN FORM
+                ================================== -->
+
+                <form id="loginForm" class="modern-login-form">
+
+
+                    <!-- =================================
+                         EMAIL
+                    ================================== -->
+
+                    <div class="modern-field">
+
+                        <label for="email">
+                            Email address
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+
+                                    <rect x="3" y="5" width="18" height="14" rx="2">
+                                    </rect>
+
+                                    <path d="m3 7 9 6 9-6">
+                                    </path>
+
+                                </svg>
+
+                            </span>
+
+
+                            <!-- IMPORTANT:
+                                 ID MUST BE "email"
+                            -->
+
+                            <input type="email" id="email" name="email" placeholder="you@example.com"
+                                autocomplete="email" required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         PASSWORD
+                    ================================== -->
+
+                    <div class="modern-field">
+
+
+                        <div class="password-label">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                        </div>
+
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+
+                                    <rect x="4" y="10" width="16" height="11" rx="2">
+                                    </rect>
+
+                                    <path d="M8 10V7a4 4 0 0 1 8 0v3">
+                                    </path>
+
+                                </svg>
+
+                            </span>
+
+
+                            <!-- IMPORTANT:
+                                 ID MUST BE "password"
+                            -->
+
+                            <input type="password" id="password" name="password" placeholder="Enter your password"
+                                autocomplete="current-password" required>
+
+
+                            <!-- PASSWORD TOGGLE -->
+
+                            <button type="button" id="togglePassword" class="password-toggle"
+                                aria-label="Show password">
+
+
+                                <svg id="eyeIcon" width="19" height="19" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8">
+
+                                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z">
+                                    </path>
+
+                                    <circle cx="12" cy="12" r="3">
+                                    </circle>
+
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         FIREBASE MESSAGE
+                    ================================== -->
+
+                    <div id="loginMessage" class="login-message">
+                    </div>
+
+
+
+                    <!-- =================================
+                         LOGIN BUTTON
+                    ================================== -->
+
+                    <button type="submit" class="premium-login-button">
+
+                        <span>
+                            Login to FoodShare
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- =================================
+                     MOBILE OTP LOGIN
+                ================================== -->
+
+                <section id="phoneLoginPanel" class="phone-login-panel" hidden>
+
+                    <div class="modern-field">
+
+                        <label for="phoneNumber">
+                            Mobile number
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.8">
+                                    <rect x="6" y="2.5" width="12" height="19" rx="2"></rect>
+                                    <path d="M10 18.5h4"></path>
+                                </svg>
+                            </span>
+
+                            <input
+                                type="tel"
+                                id="phoneNumber"
+                                placeholder="+919876543210"
+                                autocomplete="tel"
+                                inputmode="tel">
+
+                        </div>
+
+                        <small class="phone-help">
+                            Use international format, for example +919876543210.
+                        </small>
+
+                    </div>
+
+                    <div id="login-recaptcha-container"></div>
+
+                    <div id="phoneLoginMessage" class="login-message"></div>
+
+                    <button
+                        type="button"
+                        id="sendLoginOtp"
+                        class="premium-login-button">
+
+                        <span>Send OTP</span>
+                        <span class="button-arrow">→</span>
+
+                    </button>
+
+
+                    <div id="loginOtpArea" hidden>
+
+                        <div class="modern-field">
+
+                            <label for="loginOtp">
+                                Verification code
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">#</span>
+
+                                <input
+                                    type="text"
+                                    id="loginOtp"
+                                    inputmode="numeric"
+                                    autocomplete="one-time-code"
+                                    maxlength="6"
+                                    placeholder="Enter 6-digit OTP">
+
+                            </div>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            id="verifyLoginOtp"
+                            class="premium-login-button">
+
+                            <span>Verify OTP & Login</span>
+                            <span class="button-arrow">→</span>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     DIVIDER
+                ================================== -->
+
+                <div class="login-divider">
+
+                    <span>
+                        SECURE COMMUNITY ACCESS
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================
+                     SECURITY
+                ================================== -->
+
+                <div class="secure-login">
+
+
+                    <div class="secure-icon">
+
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+
+                            <path d="M12 3 5 6v5c0 4.5 3 8.5 7 10 4-1.5 7-5.5 7-10V6l-7-3Z">
+                            </path>
+
+                            <path d="m9 12 2 2 4-4">
+                            </path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Your information is protected
+                        </strong>
+
+                        <span>
+                            Secure authentication powered by Firebase.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     REGISTER
+                ================================== -->
+
+                <div class="bottom-register">
+
+                    <span>
+                        New to FoodShare?
+                    </span>
+
+                    <a href="register.html">
+                        Create an account →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <style>
+        .auth-method-switch {
+            display: flex;
+            gap: 8px;
+            margin: 0 0 22px;
+            padding: 5px;
+            border: 1px solid rgba(65, 125, 35, 0.16);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.58);
+        }
+
+        .auth-method-tab {
+            flex: 1;
+            border: 0;
+            border-radius: 10px;
+            padding: 11px 10px;
+            background: transparent;
+            color: #68705f;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .2s ease;
+        }
+
+        .auth-method-tab.active {
+            color: #fff;
+            background: #579323;
+            box-shadow: 0 6px 16px rgba(87,147,35,.18);
+        }
+
+        .phone-login-panel[hidden],
+        #loginForm[hidden] {
+            display: none !important;
+        }
+
+        .phone-help {
+            display: block;
+            margin-top: 7px;
+            color: #7a8175;
+            font-size: 12px;
+        }
+
+        #login-recaptcha-container {
+            margin: 10px 0 16px;
+            min-height: 0;
+        }
+
+        #login-recaptcha-container:empty {
+            display: none;
+        }
+
+        #loginOtpArea[hidden] {
+            display: none !important;
+        }
+
+        #phoneLoginMessage {
+            min-height: 20px;
+        }
+    </style>
+
+
+    <!-- =========================================
+         PASSWORD TOGGLE
+    ========================================== -->
+
+    <script>
+
+        const passwordInput =
+            document.getElementById("password");
+
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+
+        const eyeIcon =
+            document.getElementById("eyeIcon");
+
+
+        if (
+            togglePassword &&
+            passwordInput &&
+            eyeIcon
+        ) {
+
+            togglePassword.addEventListener(
+                "click",
+                () => {
+
+                    const isPassword =
+                        passwordInput.type === "password";
+
+
+                    passwordInput.type =
+                        isPassword
+                            ? "text"
+                            : "password";
+
+
+                    togglePassword.setAttribute(
+                        "aria-label",
+                        isPassword
+                            ? "Hide password"
+                            : "Show password"
+                    );
+
+
+                    eyeIcon.innerHTML =
+                        isPassword
+
+                            ? `
+                                <path d="M3 3l18 18"></path>
+
+                                <path
+                                    d="M10.6 10.6a2 2 0 0 0 2.8 2.8">
+                                </path>
+
+                                <path
+                                    d="M9.9 4.3A9.7 9.7 0 0 1 12 4c6.5 0 10 8 10 8a17 17 0 0 1-3.1 4.1">
+                                </path>
+
+                                <path
+                                    d="M6.1 6.1C3.4 8.2 2 12 2 12s3.5 8 10 8c1.8 0 3.4-.5 4.8-1.3">
+                                </path>
+                            `
+
+                            : `
+                                <path
+                                    d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z">
+                                </path>
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="3">
+                                </circle>
+                            `;
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+
+    <!-- =========================================
+         FIREBASE AUTHENTICATION
+    ========================================== -->
+
+    <script type="module" src="js/auth.js">
+    </script>
+
+
+</body>
+
+</html>

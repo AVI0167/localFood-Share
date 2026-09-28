@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donor Dashboard | FoodShare Local</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+
+</head>
+
+
+<body class="donor-body">
+
+
+    <!-- =========================
+     NAVBAR
+========================= -->
+
+    <header class="dashboard-navbar">
+
+        <a href="index.html" class="brand-logo dark-logo">
+
+            Food<span>Share</span>
+
+        </a>
+
+
+        <div class="nav-user">
+
+            <span id="navUserName">
+                Loading...
+            </span>
+
+            <button id="logoutButton" class="logout-button">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+     MAIN
+========================= -->
+
+    <main class="donor-main">
+
+
+        <section class="donor-header">
+
+            <div>
+
+                <span class="section-label">
+                    DONOR DASHBOARD
+                </span>
+
+                <h1>
+                    Share your surplus.
+                </h1>
+
+                <p>
+                    Give good food another destination
+                    instead of letting it go to waste.
+                </p>
+
+            </div>
+
+
+            <div class="donor-status">
+
+                <span class="status-dot"></span>
+
+                Donor Account
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+         CREATE LISTING
+    ========================= -->
+
+        <section class="donor-grid">
+
+
+            <div class="listing-form-card">
+
+                <div class="card-heading">
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Create Food Listing
+                        </h2>
+
+                        <p>
+                            Tell your community what
+                            food is available.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <form id="listingForm">
+
+
+                    <!-- Food Item -->
+
+                    <div class="form-field">
+
+                        <label for="foodItem">
+                            Food Item Name <span class="required-mark">*</span>
+                        </label>
+
+                        <input type="text" id="foodItem" placeholder="e.g. Vegetable Biryani" required>
+
+                    </div>
+
+
+
+                    <!-- Quantity -->
+
+                    <div class="form-field">
+
+                        <label for="quantity">
+                            Quantity
+                        </label>
+
+                        <input type="text" id="quantity" placeholder="e.g. 10 servings" required>
+
+                    </div>
+
+
+
+                    <!-- Food Photo -->
+
+                    <div class="form-field">
+
+                        <label for="foodPhoto">
+                            Food Photo <span class="required-mark">*</span>
+                        </label>
+
+                        <input type="file" id="foodPhoto" accept="image/*" capture="environment" required>
+
+                        <small class="field-help">
+                            Add a clear photo of the food.
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- Pickup Address -->
+
+                    <div class="form-field">
+
+                        <label>
+                            Select Pickup Location
+                        </label>
+
+                        <div id="locationMap" class="location-map"></div>
+
+                        <button type="button" id="useCurrentLocation" class="location-button">
+                            Use my current location
+                        </button>
+
+                        <small id="locationMessage" class="field-help">
+                            Click the map to choose the pickup location.
+                        </small>
+
+                        <label for="pickupAddress">
+                            Pickup Address <span class="required-mark">*</span>
+                        </label>
+
+                        <textarea id="pickupAddress" rows="4"
+                            placeholder="Select a location on the map or enter the pickup address" aria-required="true"
+                            required></textarea>
+
+                    </div>
+
+
+
+                    <!-- Message -->
+
+                    <div id="listingMessage" class="listing-message">
+                    </div>
+
+
+
+                    <!-- Submit -->
+
+                    <button type="submit" class="create-listing-button" id="createListingButton">
+
+                        Publish Food Listing
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- =========================
+             INFORMATION CARD
+        ========================= -->
+
+            <div class="donor-info-card">
+
+                <div class="info-icon">
+                    ♡
+                </div>
+
+
+                <h2>
+                    Every listing
+                    can make a difference.
+                </h2>
+
+
+                <p>
+                    Share safe, edible surplus food
+                    with people in your local community.
+                </p>
+
+
+                <div class="important-message">
+
+                    <strong>
+                        Important before publishing
+                    </strong>
+
+                    <p>
+                        Share only fresh, safe-to-eat food. Add a clear photo,
+                        accurate quantity, and a pickup address recipients can trust.
+                    </p>
+
+                </div>
+
+
+                <div class="info-list">
+
+                    <div>
+                        <span>01</span>
+                        <p>
+                            Enter accurate food information.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span>02</span>
+                        <p>
+                            Provide a clear pickup location.
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span>03</span>
+                        <p>
+                            Coordinate pickup after claiming.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+         MY LISTINGS
+    ========================= -->
+
+        <section class="my-listings-section">
+
+
+            <div class="listings-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR ACTIVITY
+                    </span>
+
+                    <h2>
+                        My Food Listings
+                    </h2>
+
+                </div>
+
+
+                <span id="listingCount" class="listing-count">
+
+                    0 listings
+
+                </span>
+
+            </div>
+
+
+
+            <div id="listingsContainer" class="listings-container">
+
+                <div class="empty-listings">
+
+                    <div class="empty-icon">
+                        +
+                    </div>
+
+                    <h3>
+                        No food listings yet
+                    </h3>
+
+                    <p>
+                        Create your first listing above
+                        to share surplus food.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+
+
+    <script type="module" src="js/donor.js">
+    </script>
+
+
+</body>
+
+</html>

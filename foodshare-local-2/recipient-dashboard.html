@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Available Food | FoodShare Local
+    </title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body class="recipient-page">
+
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header class="recipient-header">
+
+        <a href="index.html" class="dashboard-logo">
+
+            <span class="dashboard-logo-mark">
+                FS
+            </span>
+
+            <span>
+                Food<span>Share</span>
+            </span>
+
+        </a>
+
+
+        <div class="recipient-header-right">
+
+            <span class="recipient-status">
+                Recipient
+            </span>
+
+            <button id="logoutButton" class="logout-button">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         MAIN
+    ================================== -->
+
+    <main class="recipient-main">
+
+
+        <section class="recipient-hero">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    COMMUNITY FOOD FEED
+                </span>
+
+                <h1>
+                    Food available
+                    <span>near you.</span>
+                </h1>
+
+                <p>
+                    Discover surplus food shared
+                    by people and businesses in
+                    your local community.
+                </p>
+
+            </div>
+
+
+            <div class="food-count-box">
+
+                <strong id="foodCount">
+                    Loading...
+                </strong>
+
+                <span>
+                    Available now
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Message -->
+
+        <div id="pageMessage" class="page-message">
+        </div>
+
+
+        <aside class="important-message recipient-important-message">
+
+            <strong>
+                Important before claiming
+            </strong>
+
+            <p>
+                Check the food photo and pickup address carefully. Claim only
+                what you can collect on time, and contact the donor respectfully.
+            </p>
+
+        </aside>
+
+
+
+        <!-- =================================
+             FOOD CONTAINER
+        ================================== -->
+
+        <section id="foodContainer" class="food-grid">
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Firebase / Recipient Logic -->
+
+    <script type="module" src="js/recipient.js">
+    </script>
+
+
+</body>
+
+</html>
